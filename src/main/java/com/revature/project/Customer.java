@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import com.revature.driver.CarDriver;
 import com.revature.driver.Dealership;
+import com.revature.logging.LoggingUtil;
 import com.revature.project.serialize.FileSerializeDAO;
 
 
@@ -202,7 +203,7 @@ public class Customer implements Serializable{//User,
 	public static void displayMenu() {
 		System.out.println("What would you like to do?");
 		System.out.println("--------------------------------------------------------");
-		System.out.println("1. Show all existing cars in the car lot (in any order).");
+		System.out.println("1. Show all existing cars in the car lot.");
 		System.out.println("2. Make an offer.");
 		System.out.println("3. Show cars owned.");
 		System.out.println("4. View offers made.");
@@ -262,6 +263,7 @@ public class Customer implements Serializable{//User,
 //			fdao.saveCarLot(cl);
 //			fdao.saveCarDriver(cd);
 //			fdao.saveCustomer(c);
+			LoggingUtil.trace("Program ended successfully.");
 			fdao.saveDealership(d);
 			System.exit(0);
 		}

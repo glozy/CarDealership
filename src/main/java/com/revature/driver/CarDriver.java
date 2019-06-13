@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.revature.logging.LoggingUtil;
 import com.revature.project.Car;
 import com.revature.project.CarLot;
 import com.revature.project.Customer;
@@ -38,15 +39,15 @@ public class CarDriver implements Serializable{
 		}
 	}
 
-	public static void remainMonthlyPay() {
-		double payment;
+	public static void  remainMonthlyPay() {
+		double payment = 0;
 		for (Car car : CarLot.carsOwned2) {
 			payment = (car.getPrice() - Customer.offeringPrice) / 12;
 			payment = Math.round(payment*100);
 			payment /=100;
 			System.out.println("\n" + car.getYear() + " " + car.getMake() + " " + car.getModel());
 			System.out.println("Remaining payment: $" + (car.getPrice() - Customer.offeringPrice));
-			System.out.println("Monthly payment: $" + payment);
+			System.out.println("Monthly payment: $" + payment + " for 12 months");
 		}
 	}
 
@@ -84,22 +85,24 @@ public class CarDriver implements Serializable{
 		welcomeMessage();
 		int loginOption;
 		do {
-			System.out.println("\nPlease select (1) or (2)");
+			System.out.println("\nPlease select (1) or (2) or (3)");
 			while(!sc.hasNextInt()) {
 				System.out.println("Thats not a valid input");
 				sc.next();
 			}
 			loginOption = sc.nextInt();
-		} while (loginOption < 1 || loginOption > 2);
+		} while (loginOption < 1 || loginOption > 3);
 		doLoginOption(loginOption);
 	}
 
 
 	public static void welcomeMessage() {
-		System.out.println("Welcome to the Dealership");
+		System.out.println("\n        ***HELLO***         ");
+		System.out.println("Welcome to QC's Car Dealership");
 		System.out.println("--------------------------");
 		System.out.println("Press 1 for Employee Login");
 		System.out.println("Press 2 for Customer Login");
+		System.out.println("Press 3 to exit");
 		System.out.println("--------------------------");
 	}
 
@@ -107,18 +110,25 @@ public class CarDriver implements Serializable{
 		switch (action) {
 		case 1:
 			Employee e = new Employee();
-			System.out.println("Employee Login");
+			System.out.println("\nEmployee Login");
 			do {  
 				System.out.println("Enter password");
 				int pass = sc.nextInt();
 				e.login(pass);
 			} while (!e.isPasswordFlag());
+			
 			break;
 
 		case 2:
 			Customer c = new Customer();
 			System.out.println("Customer Login");
 			Customer.welcomeDisplay();
+			break;
+		case 3:
+			System.out.println("Thanks for stopping by!\nCome back soon!");
+        	//fdao.saveDealership(d);
+        	LoggingUtil.trace("Program ended successfully.");
+			System.exit(0);
 			break;
 		}
 	}

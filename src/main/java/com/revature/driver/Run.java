@@ -11,7 +11,7 @@ public class Run {
 	private static FileDAO fdao = new FileSerializeDAO();
 	
 	public static void main(String[] args) {
-		LoggingUtil.trace("This is a trace log.");
+		LoggingUtil.trace("Program started successfully.");
 		
 		Dealership d = new Dealership();
 		d = fdao.loadDealership();
@@ -21,6 +21,6 @@ public class Run {
 		
 		//fdao.saveDealership(d);
 		//d = fdao.loadDealership();
-;	}
+	}
 
 }

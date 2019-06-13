@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 import com.revature.driver.CarDriver;
 import com.revature.driver.Dealership;
+import com.revature.logging.LoggingUtil;
 import com.revature.project.serialize.FileSerializeDAO;
 
 
@@ -30,13 +31,7 @@ public class Employee implements Serializable{//implements User{
 	public ArrayList<Car> carsOwned22 = new ArrayList<Car>(cl.carsOwned2);
 	public Map <String, String> customers22  = new HashMap<String, String>(cd.customers2);
 	public Map<String, ArrayList<Car>> caps2 = new HashMap<String, ArrayList<Car>>(cd.caps);
-	
-	// ArrayList<Car> cars2 = new ArrayList<Car>(cl.cars);
-//		/* ArrayList<Car> */ e.offersMade2 = new ArrayList<Car>(cl.offersMade);
-//		/* ArrayList<Car> */ e.carsOwned22 = new ArrayList<Car>(cl.carsOwned2);
-//		/* Map <String, String> */ e.customers22 = new HashMap<String, String>(cd.customers2);
-//		/* Map<String, ArrayList<Car>> */ e.caps2 = new HashMap<String, ArrayList<Car>>(cd.caps);
-	
+		
 	
 	public static void addCar(ArrayList<Car> cars) {
 		 	boolean validInput;
@@ -44,23 +39,27 @@ public class Employee implements Serializable{//implements User{
 	        int mileage = 0, year = 0;
 	        double price = 0.0;
 	        
-	        System.out.println("Add a new car in the following format:");
-	        System.out.println("VIN MAKE MODEL COLOR YEAR MILEAGE PRICE");
-	        System.out.println("EX: WC347 Honda Accord Grey 2015 9500 20000");
 	        do {
 	            validInput = true;
+	            System.out.println("Enter VIN");
 	            VIN = sc.next();
+	            System.out.println("Enter make");
 	            make = sc.next();
+	            System.out.println("Enter model");
 	            model = sc.next();
+	            System.out.println("Enter color");
 	            color = sc.next();
-	            if(sc.hasNextInt()) 
-	                year = sc.nextInt();
+	            System.out.println("Enter year");
+	            if(sc.hasNextInt()) { 
+	                year = sc.nextInt();}
 	            else validInput = false;
-	            if(sc.hasNextInt())
-	                mileage = sc.nextInt();
+	            System.out.println("Enter mileage");
+	            if(sc.hasNextInt()) {
+	                mileage = sc.nextInt();}
 	            else validInput = false;
-	            if(sc.hasNextDouble())
-	                price = sc.nextDouble();
+	            System.out.println("Enter price");
+	            if(sc.hasNextDouble()) {
+	                price = sc.nextDouble();}
 	            else validInput = false;
 	            if(!validInput)
 	            {
@@ -137,14 +136,10 @@ public class Employee implements Serializable{//implements User{
 			offer = sc.nextInt();
 			if (offer == 1) {
 				cl.carsOwned2.add(cl.offersMade.get(carNumber-1));
-//				cd.carsOwned.put(c.get, new ArrayList<Car>());
-//				cd.carsOwned.get(c.get).add((cl.offersMade.get(carNumber-1)));
 				System.out.println("--------------");
 		        System.out.println("Offer accepted");
 		        System.out.println("--------------");
 		        cl.offersMade.remove(cl.offersMade.get(carNumber-1));
-		        //cars.remove(carNumber-1);
-		        //cl.offersMade.clear();
 			} else if (offer == 2) {
 				cl.offersMade.remove(cl.offersMade.get(carNumber-1));
 				System.out.println("--------------");
@@ -160,18 +155,18 @@ public class Employee implements Serializable{//implements User{
 	public static void displayMenu() {
          System.out.println("What would you like to do?");
          System.out.println("--------------------------------------------------------");
-         System.out.println("1. Show all existing cars in the car lot (in any order).");
+         System.out.println("1. Show all existing cars in the car lot.");
          System.out.println("2. Add a new car to the car lot.");
          System.out.println("3. Remove a car from the car lot.");
          System.out.println("4. View offers made.");
          System.out.println("5. View all payments");
 //         System.out.println("7. View customers.");
-         System.out.println("6. Exit program.\n\n");
+         System.out.println("6. Exit program.\n");
          System.out.println("--------------------------------------------------------");
          
          int menuOption = 0;
          do {
-             System.out.println("\n\nWhat would you like to do? (0 for main menu, 9 for login page)");
+             System.out.println("\nWhat would you like to do? (0 for main menu, 9 for login page)");
              menuOption = sc.nextInt();
              while(menuOption <0 || menuOption >7 && menuOption != 9)
              {
@@ -209,12 +204,6 @@ public class Employee implements Serializable{//implements User{
 	}
 	
 	public static void doMenuOption(int action, ArrayList<Car> cars)  {
-//        String newCar, VIN, make, model, color;
-//        Car foundCar = null;
-//        int carNumber = 0, year = 0, mileage = 0;
-//        float priceMin = 0.00F, priceMax = 0.00F, price = 0.00F;
-//        boolean validInput = true;
-        //initCarLot();
         switch (action) {
             case 0:
                 System.out.println("Main Menu");
@@ -224,8 +213,6 @@ public class Employee implements Serializable{//implements User{
                 System.out.println("List of Cars in the car lot");
                 System.out.println("----------------------------------------------------------");
                 cl.viewCars(cars);
-                //cl.getCars();
-               // System.out.println(Arrays.toString(cl.cars.toArray()));
                 break;
             case 2:
                 System.out.println("Add a new car to the car lot.");
@@ -245,36 +232,20 @@ public class Employee implements Serializable{//implements User{
                 System.out.println("View all payments.");
                 cd.remainMonthlyPay();
                 break;
-//            case 7:
-//                System.out.println("List of cars by given price range.");
-//                cd.getCustomers2();
-//                cd.getCaps();
-//                break;
             case 9:
                 //System.out.println("Trying to return.");
                 cd.startDriver();
                 break;
             case 6:
             	System.out.println("Thanks for stopping by!\nCome back soon!");
-//			 ArrayList<Car> cars2 = new ArrayList<Car>(cl.cars);
-//			/* ArrayList<Car> */ e.offersMade2 = new ArrayList<Car>(cl.offersMade);
-//			/* ArrayList<Car> */ e.carsOwned22 = new ArrayList<Car>(cl.carsOwned2);
-//			/* Map <String, String> */ e.customers22 = new HashMap<String, String>(cd.customers2);
-//			/* Map<String, ArrayList<Car>> */ e.caps2 = new HashMap<String, ArrayList<Car>>(cd.caps);
             	fdao.saveDealership(d);
+            	LoggingUtil.trace("Program ended successfully.");
             	System.exit(0);
-//            default:
-//                break;
-                
-      //  }
-                
-        
     }
 }
 
 	public Employee() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Employee(boolean passwordFlag, int count) {
@@ -282,10 +253,4 @@ public class Employee implements Serializable{//implements User{
 		this.passwordFlag = passwordFlag;
 		this.count = count;
 	}
-
-	//@Override
-//	public void viewCars(Car c) {
-//		// TODO Auto-generated method stub
-//		
-//	}
 }
