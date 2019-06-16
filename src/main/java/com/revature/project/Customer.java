@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.revature.dao.CustomerDao;
+import com.revature.dao.CustomerDaoImpl;
 import com.revature.driver.CarDriver;
 import com.revature.driver.Dealership;
 import com.revature.logging.LoggingUtil;
@@ -18,7 +20,7 @@ public class Customer implements Serializable{//User,
 	public static Employee e = new Employee();
 	public static Customer c = new Customer();
 	public static Car car;
-	private String name;
+	private String name, password;
 	private int id = 0;
 	private static int count = 1;
 	public static CarLot cl;// = new CarLot();
@@ -37,9 +39,16 @@ public class Customer implements Serializable{//User,
 		id = count++;
 	}
 
+
+	public Customer(int id, String name, String password) {
+		this.id =id;
+		this.name = name;
+		this.password = password;
+	}
+
 	@Override
 	public String toString() {
-		return "Customer [name=" + name + ", id=" + id + "]";
+		return "Customer [name=" + name + ", id=" + id + " " + password +"]";
 	}
 
 	public String getName() {
@@ -195,6 +204,8 @@ public class Customer implements Serializable{//User,
 			//System.out.println(cd.caps);
 			System.out.println("New account created successfully\n");
 			System.out.println("Welcome! " + c.get);
+			CustomerDao newCust = new CustomerDaoImpl();
+			newCust.createCustomer(c);
 			//CarDriver.startDriver();
 			displayMenu();
 		}		

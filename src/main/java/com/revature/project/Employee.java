@@ -1,13 +1,14 @@
 package com.revature.project;
 
-import java.io.ObjectInputStream.GetField;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.revature.dao.CarDao;
+import com.revature.dao.CarDaoImpl;
+import com.revature.dao.CustomerDaoImpl;
 import com.revature.driver.CarDriver;
 import com.revature.driver.Dealership;
 import com.revature.logging.LoggingUtil;
@@ -70,6 +71,8 @@ public class Employee implements Serializable{//implements User{
 	            }
 	        } while(validInput == false);
 	        cl.cars.add(new Car(VIN,make,model,color,year,mileage,price, 0.0));
+	        CarDao newCar = new CarDaoImpl();
+	        newCar.createCar(new Car(VIN,make,model,color,year,mileage,price, 0.0));
 	       // cl.cars.add(new Car("AT210", "Ford", "Focus", "Silver", 2018, 21000, 7500.00));
 	   
 	        System.out.println("-------------------------");
@@ -231,6 +234,13 @@ public class Employee implements Serializable{//implements User{
             case 5:
                 System.out.println("View all payments.");
                 cd.remainMonthlyPay();
+                break;
+            case 7:
+                System.out.println("View all payments.");
+                CustomerDaoImpl cdi = new CustomerDaoImpl();
+                for (Customer ca: cdi.getAllCustomer()) {
+                	System.out.println(ca);
+                }
                 break;
             case 9:
                 //System.out.println("Trying to return.");

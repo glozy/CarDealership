@@ -3,6 +3,9 @@ package com.revature.project;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import com.revature.dao.CarDao;
+import com.revature.dao.CarDaoImpl;
+
 
 public class CarLot implements Serializable{
 	
@@ -17,6 +20,7 @@ public class CarLot implements Serializable{
 	public static void initCarLot() {
 		cl = new CarLot();
       cl.cars.add(new Car("AB425", "Toyota", "Rav4", "Red  ", 2012, 56000, 5000.00, 0.0));
+//      CarDao newCar = new CarDaoImpl();
        cl.cars.add(new Car("CD553", "Honda", "Civic", "Blue ", 2000, 5000, 1900.00, 0.0));
      cl.cars.add(new Car("AT210", "Ford", "Focus", "Silver", 2018, 21000, 7500.00, 0.0));
 	}

@@ -85,3 +85,92 @@
 2019-06-12 10:19:58 TRACE root:10 - Program started successfully.
 2019-06-12 10:27:00 TRACE root:10 - Program ended successfully.
 2019-06-12 10:32:02 TRACE root:10 - Program started successfully.
+2019-06-15 17:55:00 TRACE root:10 - Program started successfully.
+2019-06-15 17:59:11 TRACE root:10 - Program started successfully.
+2019-06-15 18:07:22 TRACE root:10 - Program started successfully.
+2019-06-15 18:07:33 TRACE root:10 - Program ended successfully.
+2019-06-15 18:07:34 TRACE root:10 - Program ended successfully.
+2019-06-15 18:08:42 TRACE root:10 - Program started successfully.
+2019-06-15 18:08:53 TRACE root:10 - Program ended successfully.
+2019-06-15 18:08:53 TRACE root:10 - Program ended successfully.
+2019-06-15 18:10:41 TRACE root:10 - Program started successfully.
+2019-06-15 18:10:53 TRACE root:10 - Program ended successfully.
+2019-06-15 18:11:15 TRACE root:10 - Program ended successfully.
+2019-06-15 18:11:58 TRACE root:10 - Program started successfully.
+2019-06-15 18:12:11 TRACE root:10 - Program ended successfully.
+2019-06-15 18:12:12 TRACE root:10 - Program ended successfully.
+2019-06-15 18:16:21 TRACE root:10 - Program started successfully.
+2019-06-15 18:16:28 TRACE root:10 - Program ended successfully.
+2019-06-15 18:17:46 TRACE root:10 - Program started successfully.
+2019-06-15 18:17:52 TRACE root:10 - Program ended successfully.
+2019-06-15 18:20:29 TRACE root:10 - Program started successfully.
+2019-06-15 18:20:37 TRACE root:10 - Program ended successfully.
+2019-06-15 18:41:26 TRACE root:10 - Program started successfully.
+2019-06-15 18:41:43 INFO  root:18 - Connection Successful.
+2019-06-15 18:43:34 TRACE root:10 - Program started successfully.
+2019-06-15 18:43:40 INFO  root:18 - Connection to DB Successful.
+2019-06-15 19:09:37 TRACE root:10 - Program started successfully.
+2019-06-15 19:10:26 INFO  root:18 - Connection to DB Successful.
+2019-06-15 19:10:27 INFO  root:18 - Connection to DB Successful.
+2019-06-15 19:11:28 TRACE root:10 - Program started successfully.
+2019-06-15 19:12:11 INFO  root:18 - Connection to DB Successful.
+2019-06-15 19:12:12 INFO  root:18 - Connection to DB Successful.
+2019-06-15 19:12:12 INFO  root:18 - Successfully added a car
+2019-06-15 19:31:58 INFO  root:18 - Connection to DB Successful.
+2019-06-15 19:54:45 TRACE root:10 - Program started successfully.
+2019-06-15 19:55:14 INFO  root:18 - Connection to DB Successful.
+2019-06-15 19:55:15 INFO  root:18 - Connection to DB Successful.
+2019-06-15 19:55:15 INFO  root:18 - Successfully added a car
+2019-06-15 20:00:36 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:00:36 INFO  root:18 - Successfully added a car
+2019-06-15 20:08:38 TRACE root:10 - Program started successfully.
+2019-06-15 20:08:52 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:08:52 INFO  root:18 - Creating a customer
+2019-06-15 20:12:28 TRACE root:10 - Program started successfully.
+2019-06-15 20:12:34 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:12:52 INFO  root:18 - Creating a customer
+2019-06-15 20:13:58 INFO  root:18 - Creating a customer
+2019-06-15 20:15:43 TRACE root:10 - Program started successfully.
+2019-06-15 20:15:52 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:16:13 TRACE root:10 - Program started successfully.
+2019-06-15 20:16:22 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:16:41 TRACE root:10 - Program started successfully.
+2019-06-15 20:16:51 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:16:51 INFO  root:18 - Creating a customer
+2019-06-15 20:20:47 TRACE root:10 - Program started successfully.
+2019-06-15 20:20:58 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:20:58 INFO  root:18 - Creating a customer
+2019-06-15 20:22:18 TRACE root:10 - Program started successfully.
+2019-06-15 20:22:26 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:22:27 INFO  root:18 - Creating a customer
+2019-06-15 20:27:55 TRACE root:10 - Program started successfully.
+2019-06-15 20:28:04 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:28:17 ERROR root:26 - Customer was not added. Rolling back
+2019-06-15 20:28:17 INFO  root:18 - Creating a customer
+2019-06-15 20:42:42 TRACE root:10 - Program started successfully.
+2019-06-15 20:42:56 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:42:57 ERROR root:26 - Customer was not added. Rolling back
+2019-06-15 20:42:57 INFO  root:18 - Creating a customer
+2019-06-15 20:55:06 TRACE root:10 - Program started successfully.
+2019-06-15 20:55:14 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:55:15 ERROR root:26 - Customer was not added. Rolling back
+2019-06-15 20:55:15 INFO  root:18 - Creating a customer
+2019-06-15 20:55:50 ERROR root:26 - Customer was not added. Rolling back
+2019-06-15 20:55:50 INFO  root:18 - Creating a customer
+2019-06-15 20:56:11 TRACE root:10 - Program started successfully.
+2019-06-15 20:56:19 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:56:20 INFO  root:18 - Creating a customer
+2019-06-15 20:56:58 TRACE root:10 - Program started successfully.
+2019-06-15 20:57:07 INFO  root:18 - Connection to DB Successful.
+2019-06-15 20:57:07 INFO  root:18 - Creating a customer
+2019-06-15 20:59:59 INFO  root:18 - Creating a customer
+2019-06-15 21:11:26 TRACE root:10 - Program started successfully.
+2019-06-15 21:12:02 INFO  root:18 - Connection to DB Successful.
+2019-06-15 21:12:25 TRACE root:10 - Program started successfully.
+2019-06-15 21:12:55 INFO  root:18 - Connection to DB Successful.
+2019-06-15 21:12:55 INFO  root:18 - Adding a car
+2019-06-15 21:15:58 TRACE root:10 - Program started successfully.
+2019-06-15 21:16:04 INFO  root:18 - Connection to DB Successful.
+2019-06-15 21:27:39 TRACE root:10 - Program started successfully.
+2019-06-15 21:27:48 INFO  root:18 - Connection to DB Successful.
+2019-06-15 21:27:49 INFO  root:18 - Creating a customer
