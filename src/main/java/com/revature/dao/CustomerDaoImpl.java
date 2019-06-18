@@ -16,12 +16,13 @@ import com.revature.util.ConnectionFactory;
 public class CustomerDaoImpl implements CustomerDao {
 
 	private static Connection conn = ConnectionFactory.getConnection();
-
+	public static ArrayList<Customer> custList = new ArrayList<Customer>();
+	
 	@Override
 	public void createCustomer(Customer c) {
 		try {
 			conn.setAutoCommit(false);
-			String query = "insert into customer_dealership(username,password) values (?,?)";
+			String query = "insert into customer_dealership(username,pass_word) values (?,?)";
 			PreparedStatement pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, c.get);
 			pstmt.setString(2, c.get2);
@@ -43,26 +44,12 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public void updateCustomer(Customer c) {
 		try {
-
-			Statement stmt = conn.createStatement();
-			conn.setAutoCommit(false);  //needs to be done to run transactions
-			Savepoint sp = conn.setSavepoint("Before Update");
-			String query = "update user_table set password = '" ;//+ c.getPassword() + "' where username = '" + c.getFirstName() + "'";
-			int numberOfRows = stmt.executeUpdate(query);
-
-			if (numberOfRows > 1) {
-				conn.rollback(sp);
-				System.out.println("Too many rows affected");
-			}
-
-			conn.commit();
-			conn.setAutoCommit(true);
+			PreparedStatement pstmt = conn.prepareStatement("update customer_dealership set password = ? where username = ?");
+			pstmt.setString(1, c.get2);
+			pstmt.setString(2, c.get);
+			pstmt.executeUpdate();
 		} catch (SQLException e) {
-			try {
-				conn.rollback();
-			} catch (SQLException e1) {
-				e1.printStackTrace();
-			}
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -76,19 +63,66 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public Customer getCustomerById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		Customer ret = null;
+		String sql = "select * from customer_dealership where customerid =" + id;
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				ret = new Customer();
+				ret.setId(rs.getInt(1));
+				ret.setName(rs.getString("username"));
+				ret.setPassword(rs.getString("pass_word"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
 	}
 
 	@Override
 	public Customer getCustomerByUsername(String username) {
-		// TODO Auto-generated method stub
-		return null;
+//		Customer ret = null;
+//		String sql = "select * from customer_dealership where customerid =" + id;
+//		try {
+//			Statement stmt = conn.createStatement();
+//			ResultSet rs = stmt.executeQuery(sql);
+//			if (rs.next()) {
+//				ret = new Customer();
+//				ret.setId(rs.getInt(1));
+//				ret.setName(rs.getString("username"));
+//				ret.setPassword(rs.getString("pass_word"));
+//			}
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		//return ret;
+		String sql = "select username from customer_dealership where username = '" + username + "'";
+		Customer c = null;
+		Statement stmt;
+		try {
+			stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			rs.getString(1);
+			c = new Customer(rs.getString(1));
+//			while(rs.next()) {
+//				custList.add(new Customer(rs.getInt(1), rs.getString(2), rs.getString(3)));//, rs.getString(4)));
+//			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return c;
+
+		//return rs.getString(1);
 	}
 
 	@Override
-	public List<Customer> getAllCustomer() {
-		List<Customer> custList = new ArrayList<Customer>();
+	public ArrayList<Customer> getAllCustomer() {
+		
 
 		String sql = "select * from customer_dealership";
 

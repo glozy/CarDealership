@@ -11,26 +11,26 @@ import java.util.List;
 
 import com.revature.logging.LoggingUtil;
 import com.revature.project.Car;
+import com.revature.project.Customer;
 import com.revature.util.ConnectionFactory;
 
 public class CarDaoImpl implements CarDao {
 
 	private static Connection conn = ConnectionFactory.getConnection();
-    
+	public static ArrayList<Car> carList = new ArrayList<Car>();
 	
 	@Override
 	public void createCar(Car c) {
 		try {
 			conn.setAutoCommit(false);
-			String query = "insert into car_dealership(vin,make,model,color,caryear,mileage,price) values (?,?,?,?,?,?,?)";
+			String query = "insert into car_dealership(vin,make,model,car_year,mileage,price) values (?,?,?,?,?,?)";
 			PreparedStatement pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, c.getVIN());
 			pstmt.setString(2, c.getMake());
 			pstmt.setString(3, c.getModel());
-			pstmt.setString(4, c.getColor());
-			pstmt.setInt(5, c.getYear());
-			pstmt.setInt(6, c.getMileage());
-			pstmt.setDouble(7, c.getPrice());
+			pstmt.setInt(4, c.getYear());
+			pstmt.setInt(5, c.getMileage());
+			pstmt.setDouble(6, c.getPrice());
 			Savepoint sp = conn.setSavepoint("Before creating a car");
 			boolean check = pstmt.execute();
 			if (check) {
@@ -49,19 +49,28 @@ public class CarDaoImpl implements CarDao {
 
 	@Override
 	public void updateCar(Car c) {
-		// TODO Auto-generated method stub
+		try {
+			conn.setAutoCommit(false);
+			PreparedStatement pstmt = conn.prepareStatement("update car_dealership set price = ? where vin = ?");
+			pstmt.setDouble(1, c.getPrice());
+			pstmt.setString(2, c.getVIN());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
 	@Override
 	public void deleteCar(Car c) {
 		try {
-			Statement stmt = conn.createStatement();
-			conn.setAutoCommit(false);  //needs to be done to run transactions
-			Savepoint sp = conn.setSavepoint("Before delete");
-			//String query = "delete from car_dealership where carid = ; set password = '" + u.getPassword() + "' where username = '" + u.getUsername() + "'";
-			//int numberOfRows = stmt.executeUpdate(query);
-			
+			conn.setAutoCommit(false);
+			PreparedStatement pstmt = conn.prepareStatement("update car_dealership set available = false where carid = ?");
+			//pstmt.setString(1, c.getPrice());
+			pstmt.setInt(1, c.getId());
+			pstmt.executeUpdate();
+//			
 //			if (numberOfRows > 1) {
 //				conn.rollback(sp);
 //				System.out.println("Too many rows affected");
@@ -82,8 +91,23 @@ public class CarDaoImpl implements CarDao {
 
 	@Override
 	public Car getCarById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		Car ret = null;
+		String sql = "select * from car_dealership where carid =" + id;
+		try {
+			conn.setAutoCommit(false);
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				ret = new Car();
+				ret.setId(rs.getInt(1));
+				//ret.setName(rs.getString("username"));
+				//ret.setPassword(rs.getString("password"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
 	}
 
 	@Override
@@ -93,16 +117,17 @@ public class CarDaoImpl implements CarDao {
 	}
 
 	@Override
-	public List<Car> getAllCars() {
-		List<Car> carList = new ArrayList<Car>();
-		String sql = "select * from car_dealership";
+	public ArrayList<Car> getAllCars() {
+		
+		String sql = "select carid,vin,make,model,car_year,mileage,price from car_dealership where available = 'true'";
         Statement stmt;
         try {
             stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
-            	carList.add(new Car(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getInt(6), rs.getDouble(7), 0));
+            	carList.add(new Car(rs.getInt(1),rs.getString(2), rs.getString(3), 
+            			rs.getString(4), rs.getInt(5), rs.getInt(6), rs.getDouble(7)));
             }
 
         } catch (SQLException e) {

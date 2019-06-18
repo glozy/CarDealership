@@ -7,25 +7,46 @@ import java.util.ArrayList;
 public class Car implements Serializable{
 	
 	private String VIN, make, model, color;
-	private int year, mileage;
+	private int year, mileage, id;
+	private boolean offerFlag = false;
+	
+
 	private double price, offerPrice;
 	//public int 
 	
 	public Car() {}
 	
-	public Car(String VIN, String make, String model, String color, int year, int mileage, double price, double offerPrice) {
+	public Car(int id,String VIN, String make, String model, int year, int mileage, double price) {
+		this.id = id;
 		this.VIN = VIN;
 		this.make = make;
 		this.model = model;
-		this.color = color;
+		//this.color = color;
 		this.year = year;
 		this.mileage = mileage;
 		this.price = price;
-		this.offerPrice = offerPrice;
+		this.offerFlag = false;
+		
 	}
 
+	public Car(int int1, int id, double offerPrice) {
+		this.id = id;
+		this.offerPrice = offerPrice;
+		this.offerFlag = false;
+	}
+
+	public void setOfferFlag(boolean offerFlag) {
+		this.offerFlag = offerFlag;
+	}
+
+	public int getId() {
+		return id;
+	}
 	
-	
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public double getOfferPrice() {
 		return offerPrice;
 	}
@@ -61,9 +82,8 @@ public class Car implements Serializable{
 	int i = 1;
 	String s = "";
     for (int j = 0; j < 1; j++) {
-    	System.out.println("# " + "| " + "VIN " + "| " + "Make " + "| " + "Model " + "| " + "Color " + "| " + "Year " + "| " + "Mileage " + "| " + "Price ");
-        System.out.println(i++ + " " + getVIN() + " " +  getMake() + " " + getModel() + " " + getColor()
-        			+ " " + getYear() + " " + getMileage() + " " + getPrice());
+    	System.out.println("# " + "| " + "VIN " + "| " + "Make " + "| " + "Model " + "| " + "Year " + "| " + "Mileage " + "| " + "Price ");
+			System.out.println(getId() +  "  " + getVIN() + "  " +  getMake() + "  " + getModel() + "  " +  getYear() + "  " + getMileage() + "  " + getPrice());
         System.out.println();
     }
 	return s;

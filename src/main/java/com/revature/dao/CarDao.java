@@ -1,5 +1,6 @@
 package com.revature.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.revature.project.Car;
@@ -16,7 +17,7 @@ public interface CarDao {
 	
 	public Car getCarByUsername(String username);
 	
-	public List<Car> getAllCars();
+	public ArrayList<Car> getAllCars();
 
 	void preparedUpdateCar(Car c);
 	

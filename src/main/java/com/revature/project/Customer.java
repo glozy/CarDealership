@@ -5,8 +5,13 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.revature.dao.CarDaoImpl;
 import com.revature.dao.CustomerDao;
 import com.revature.dao.CustomerDaoImpl;
+import com.revature.dao.OfferDao;
+import com.revature.dao.OfferDao1;
+import com.revature.dao.OfferDaoImpl;
+import com.revature.dao.OfferDaoImpl1;
 import com.revature.driver.CarDriver;
 import com.revature.driver.Dealership;
 import com.revature.logging.LoggingUtil;
@@ -21,7 +26,7 @@ public class Customer implements Serializable{//User,
 	public static Customer c = new Customer();
 	public static Car car;
 	private String name, password;
-	private int id = 0;
+	private int id;
 	private static int count = 1;
 	public static CarLot cl;// = new CarLot();
 	private static FileSerializeDAO fdao = new FileSerializeDAO();
@@ -29,9 +34,26 @@ public class Customer implements Serializable{//User,
 	public static Scanner sc = new Scanner(System.in);
 	public String get,get2;
 	private static Dealership d;
-
+	private static OfferDao newOffer = new OfferDaoImpl();
+	private static OfferDao1 newOffer1 = new OfferDaoImpl1();
+	private static CarDaoImpl newCar = new CarDaoImpl();
+	private static CustomerDaoImpl newCust = new CustomerDaoImpl();
+	
+	
 	public Customer() {
 		super();
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public Customer(String name) {
@@ -61,6 +83,8 @@ public class Customer implements Serializable{//User,
 
 	public static void makeOffer(ArrayList<Car> cars) {
 		int carNumber;
+		//ArrayList<Car> carList = newCar.getAllCars();
+		//System.out.println(newCar.carList);
 		System.out.println("Please select # of the car you like");
 
 		do {
@@ -70,22 +94,35 @@ public class Customer implements Serializable{//User,
 				sc.next();
 			}
 			carNumber = sc.nextInt();
-		} while (carNumber < 1 || carNumber > cars.size());
+		} while (carNumber < 1 || carNumber > newCar.carList.size());
 		
-		if (CarLot.offersMade.contains(cars.get(carNumber-1))) {
-			System.out.println("\nOffer for this car has already been made");			
-		} else {
-			CarLot.offersMade.add(cars.get(carNumber-1));
-			CarDriver.caps.put(c.get, new ArrayList<Car>());
-			CarDriver.caps.get(c.get).add((cars.get(carNumber-1)));
+		//if (CarLot.offersMade.contains(cars.get(carNumber-1))) {
+		//	System.out.println("\nOffer for this car has already been made");			
+		//} else {
+			//newOffer.createOffer(new Car(c.getId(),car.getId(),car.getOfferPrice()));
+			//CarLot.offersMade.add(cars.get(carNumber-1));
+			//CarDriver.caps.put(c.get, new ArrayList<Car>());
+			//CarDriver.caps.get(c.get).add((cars.get(carNumber-1)));
+			
 			System.out.println("Please enter your price");
 			offeringPrice = sc.nextInt();
 			//car.setOfferPrice(  offeringPrice);
 			System.out.println("--------------");
 			System.out.println("Car offer made");
 			System.out.println("--------------");
+			//System.out.println(newCust.custList.get(2).getId());
+			//System.out.println(newCust.getCustomerById(newCust.custList.get(2).getId()));
+			//System.out.println(newCust.getCustomerById(c.getId()));
+			Integer pending = 1;
+			//newOffer.createOffer(new Car(newCust.custList.get(2).getId(),newCar.carList.get(carNumber-1).getId(),c.offeringPrice));
+			//Offer o = new Offer(newCust.custList.get(2).getId(), newCar.carList.get(carNumber-1).getId(), c.offeringPrice, pending );
+			newOffer1.insertOffer(new Offer(newCust.custList.get(2).getId(), newCar.carList.get(carNumber-1).getId(), c.offeringPrice, pending ));
+			//Car offerCar = newCar.getCarById(newCar.carList.get(carNumber-1).getId());
+			//offerCar.setOfferFlag(true);
+			
+			
 		}
-	}
+	//}
 
 	public static void viewCars2(ArrayList<Car> cars) {
 		int i = 1;
@@ -111,6 +148,10 @@ public class Customer implements Serializable{//User,
 			+ "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice() + "   " + offeringPrice);//offeringPrice );//+ cd.customers2.get(car));
 			System.out.println();
 		}
+		OfferDaoImpl om = new OfferDaoImpl();
+        for (Car ca: om.getAllOffers()) {
+        	System.out.println(ca);
+        }
 	}
 
 	public static void viewCarsOwned2() {
@@ -167,23 +208,86 @@ public class Customer implements Serializable{//User,
 	public static void loginAccount() {
 		System.out.println("Enter username: ");
 		c.get = sc.next();
-		if (cd.customers2.containsKey(c.get)) {;
-		System.out.println("Account Found");
-		System.out.println("Enter password: ");
-		c.get2 = sc.next();
-		if (cd.customers2.containsKey(c.get) && cd.customers2.containsValue(c.get2)) {
-			System.out.println("\n" + "Welcome Back " + c.get);
-			displayMenu();
-		} else {
-			System.out.println("Wrong password");
-			loginAccount();
+		CustomerDao newCust = new CustomerDaoImpl();
+		ArrayList<Customer> custList = newCust.getAllCustomer();
+		System.out.println(custList);
+		if (custList.contains(c.get)) {
+			System.out.println("forever youg");
 		}
-		} else {
-			System.out.println("No Accounts found! \n" + "Add an Account first");
-			welcomeDisplay();
+		//System.out.println(custList.get(0).getName());
+		for (int i = 0; i < custList.size(); i++) {
+			if (custList.get(i).name.equals(c.get) ) {
+				System.out.println("Account Found");
+				System.out.println("Enter password: ");
+				c.get2 = sc.next();
+				if (custList.get(i).password.equals(c.get2) ) {
+					System.out.println("\n" + "Welcome Back " + c.get);
+					displayMenu();
+				} else {
+					System.out.println("Wrong password");
+					loginAccount();
+				}
 		}
+		} 
+		
+//		for(Customer no : custList) {
+//			    if(no.equals(c.get)) {
+//			    	System.out.println("hello");
+//			    }
+//		
+//		}
+//		if (cd.customers2.containsKey(c.get)) {;
+//		System.out.println("Account Found");
+//		System.out.println("Enter password: ");
+//		c.get2 = sc.next();
+//		if (cd.customers2.containsKey(c.get) && cd.customers2.containsValue(c.get2)) {
+//			System.out.println("\n" + "Welcome Back " + c.get);
+//			displayMenu();
+//		} else {
+//			System.out.println("Wrong password");
+//			loginAccount();
+//		}
+//		} else {
+//			System.out.println("No Accounts found! \n" + "Add an Account first");
+//			welcomeDisplay();
+//		}
 	}
 
+
+	
+
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((get == null) ? 0 : get.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Customer other = (Customer) obj;
+		if (get == null) {
+			if (other.get != null)
+				return false;
+		} else if (!get.equals(other.get))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
 
 	public static void createAccount(Map <String, Customer> customers2) {
 		System.out.println("Enter username: ");
@@ -245,11 +349,13 @@ public class Customer implements Serializable{//User,
 		case 1:
 			System.out.println("List of Cars in the car lot");
 			System.out.println("----------------------------------------------------------");
-			CarLot.viewCars(cars);
+			//CarLot.viewCars(cars);
+			cl.viewCars(cars);
 			break;
 		case 2:
 			System.out.println("Make an offer.");
-			CarLot.viewCars(cars);
+			//CarLot.viewCars(cars);
+			cl.viewCars(cars);
 			makeOffer(cars);
 			break;
 		case 3:

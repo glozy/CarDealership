@@ -26,12 +26,15 @@ public class Employee implements Serializable{//implements User{
 	public static Car car;
 	private static Dealership d;
 	private static Employee e;
+	private static CarDaoImpl newCar = new CarDaoImpl();
 	
 	public ArrayList<Car> cars2 = new ArrayList<Car>(cl.cars);
 	public ArrayList<Car> offersMade2 = new ArrayList<Car>(cl.offersMade);
 	public ArrayList<Car> carsOwned22 = new ArrayList<Car>(cl.carsOwned2);
 	public Map <String, String> customers22  = new HashMap<String, String>(cd.customers2);
 	public Map<String, ArrayList<Car>> caps2 = new HashMap<String, ArrayList<Car>>(cd.caps);
+	
+	//public static ArrayList<Car> carList = newCar.getAllCars();
 		
 	
 	public static void addCar(ArrayList<Car> cars) {
@@ -70,9 +73,9 @@ public class Employee implements Serializable{//implements User{
 	                System.out.println("EX: 123456 Honda Accord 2015 9500 20000\n");
 	            }
 	        } while(validInput == false);
-	        cl.cars.add(new Car(VIN,make,model,color,year,mileage,price, 0.0));
-	        CarDao newCar = new CarDaoImpl();
-	        newCar.createCar(new Car(VIN,make,model,color,year,mileage,price, 0.0));
+	       // cl.cars.add(new Car(VIN,make,model,color,year,mileage,price));
+	        
+	        newCar.createCar(new Car(newCar.carList.get(0).getId()+1,VIN,make,model,year,mileage,price));
 	       // cl.cars.add(new Car("AT210", "Ford", "Focus", "Silver", 2018, 21000, 7500.00));
 	   
 	        System.out.println("-------------------------");
@@ -83,7 +86,8 @@ public class Employee implements Serializable{//implements User{
 	
 	public static void removeCar(ArrayList<Car> cars) {
 		int carNumber;
-		if(cars.size()>0) {
+		
+		if(newCar.carList.size()>0) {
 			System.out.println("Please select # of the car you want to delete");
 			//CarLot.viewCars(cars);
 			do {
@@ -95,8 +99,9 @@ public class Employee implements Serializable{//implements User{
 				}
 				carNumber = sc.nextInt();
 
-			} while (carNumber < 1 || carNumber > cars.size());
-			cars.remove(carNumber-1);
+			} while (carNumber < 1 || carNumber > newCar.carList.size());
+			newCar.carList.remove(carNumber-1);
+			newCar.deleteCar(newCar.getCarById(carNumber));
 			System.out.println("-----------------------");
 	        System.out.println("Car removed succesfully");
 	        System.out.println("-----------------------");
@@ -113,15 +118,15 @@ public class Employee implements Serializable{//implements User{
 		}
 	}
 	
-	public static void viewCars2(ArrayList<Car> cars) {
-		int i = 1;
-        for (Car car : cars) {
-        	System.out.println("# " + "| " + "VIN " + "| " + "Make " + "| " + "Model " + "| " + "Color " + "| " + "Year " + "| " + "Mileage " + "| " + "Price " + "| " + "Offer ");
-            System.out.println(i++ + " " + car.getVIN() + " " +  car.getMake() + " " + car.getModel() + " " + car.getColor()
-            			+ " " + car.getYear() + " " + car.getMileage() + " " + "$"+ car.getPrice());
-            System.out.println();
-        }
-	}
+//	public static void viewCars2(ArrayList<Car> cars) {
+//		int i = 1;
+//        for (Car car : cars) {
+//        	System.out.println("# " + "| " + "VIN " + "| " + "Make " + "| " + "Model " + "| " + "Color " + "| " + "Year " + "| " + "Mileage " + "| " + "Price " + "| " + "Offer ");
+//            System.out.println(i++ + " " + car.getVIN() + " " +  car.getMake() + " " + car.getModel() + " " + car.getColor()
+//            			+ " " + car.getYear() + " " + car.getMileage() + " " + "$"+ car.getPrice());
+//            System.out.println();
+//        }
+//	}
 	
 	public static void acceptOffer(ArrayList<Car> cars) {
 		int carNumber, offer;
@@ -216,6 +221,10 @@ public class Employee implements Serializable{//implements User{
                 System.out.println("List of Cars in the car lot");
                 System.out.println("----------------------------------------------------------");
                 cl.viewCars(cars);
+//                CarDaoImpl cad = new CarDaoImpl();
+//                for (Car ca: cad.getAllCars()) {
+//                	System.out.println(ca);
+//                }
                 break;
             case 2:
                 System.out.println("Add a new car to the car lot.");

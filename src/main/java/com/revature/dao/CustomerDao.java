@@ -1,5 +1,6 @@
 package com.revature.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.revature.project.Customer;
@@ -16,7 +17,7 @@ public interface CustomerDao {
 	
 	public Customer getCustomerByUsername(String username);
 	
-	public List<Customer> getAllCustomer();
+	public ArrayList<Customer> getAllCustomer();
 
 	void preparedUpdateCustomer(Customer c);
 }
