@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.revature.logging.LoggingUtil;
+import com.revature.project.Car;
 import com.revature.project.Customer;
 import com.revature.util.ConnectionFactory;
 
@@ -17,6 +17,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	private static Connection conn = ConnectionFactory.getConnection();
 	public static ArrayList<Customer> custList = new ArrayList<Customer>();
+	public static CarDaoImpl cdi = new CarDaoImpl();
 	
 	@Override
 	public void createCustomer(Customer c) {
@@ -83,22 +84,6 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public Customer getCustomerByUsername(String username) {
-//		Customer ret = null;
-//		String sql = "select * from customer_dealership where customerid =" + id;
-//		try {
-//			Statement stmt = conn.createStatement();
-//			ResultSet rs = stmt.executeQuery(sql);
-//			if (rs.next()) {
-//				ret = new Customer();
-//				ret.setId(rs.getInt(1));
-//				ret.setName(rs.getString("username"));
-//				ret.setPassword(rs.getString("pass_word"));
-//			}
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		//return ret;
 		String sql = "select username from customer_dealership where username = '" + username + "'";
 		Customer c = null;
 		Statement stmt;
@@ -147,6 +132,29 @@ public class CustomerDaoImpl implements CustomerDao {
 	public void preparedUpdateCustomer(Customer c) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public ArrayList<Car> viewCars(String userName) {
+			ArrayList<Car> outCars = new ArrayList<Car>();
+			String sql2 = "select carid, vin, make, model, car_year, mileage, price from car_dealership where customerid in "
+					+ "(select customerid from customer_dealership where username = '" + userName + "')";
+			try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql2);
+			while (rs.next()) {
+			//=rs.getInt(1)
+			//outCars.add(cdi.getCarById(rs.getInt(1)));	
+			outCars.add(new Car(rs.getInt(1),rs.getString(2), rs.getString(3), 
+        			rs.getString(4), rs.getInt(5), rs.getInt(6), rs.getDouble(7)));
+			}
+			} catch (SQLException e) {
+
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			}
+			return outCars;
+			
 	}
 
 }

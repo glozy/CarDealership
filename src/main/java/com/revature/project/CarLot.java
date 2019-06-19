@@ -15,7 +15,7 @@ public class CarLot implements Serializable{
 	public  static ArrayList<Car> offersMade = new ArrayList<Car>();
 	public  static ArrayList<Car> carsOwned2 = new ArrayList<Car>();
 	public static CarLot cl;// = new CarLot();
-	
+	private static CarDaoImpl cad = new CarDaoImpl();
 	
 	public static void initCarLot() {
 		cl = new CarLot();
@@ -32,16 +32,15 @@ public class CarLot implements Serializable{
 
 	public static void viewCars(ArrayList<Car> cars) {
 		int i = 1;
-      //  for (Car car : cl.cars) {
-        	//System.out.println("# " + "| " + "VIN  " + "| " + "Make  " + "| " + "Model " + "| " + "Color " + "| " + "Year " + "| " + "Mileage " + "| " + "Price ");
-			//System.out.println(/* i++ + */ "  " + car.getVIN() + "  " +  car.getMake() + "    " + car.getModel() + "   " + car.getColor()
-            		//	+ "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice());
-          //  System.out.println();
-       // }
-        CarDaoImpl cad = new CarDaoImpl();
-        for (Car ca: cad.getAllCars()) {
-        	System.out.println(ca);
+        for (Car car : cad.getAllCars()) {
+        	System.out.println("# " + "| " + "VIN  " + "| " + "Make  " + "| " + "Model " + "| " + "Year " + "| " + "Mileage " + "| " + "Price ");
+			System.out.println( i++ +  "  " + car.getVIN() + "  " +  car.getMake() + "    " + car.getModel() + "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice());
+            System.out.println();
         }
+        
+//        for (Car ca: cad.getAllCars()) {
+//        	System.out.println(ca);
+//        }
 	}
 	
 	public static ArrayList<Car> getCars() {
@@ -62,7 +61,7 @@ public class CarLot implements Serializable{
 	public static void viewOffersMade() {
 		//CarLot cl = new CarLot();
 		int i = 1;
-        for (Car car : cl.offersMade) {
+        for (Car car : cad.getAllOffers()) {
         	System.out.println("# " + "| " + "VIN " + "| " + "Make " + "| " + "Model " + "| " + "Color " + "| " + "Year " + "| " + "Mileage " + "| " + "Price " + "| " + "Offer ");
             System.out.println(i++ + " " + car.getVIN() + " " +  car.getMake() + " " + car.getModel() + " " + car.getColor()
             			+ " " + car.getYear() + " " + car.getMileage() + " " + car.getPrice());

@@ -7,17 +7,15 @@ import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.revature.logging.LoggingUtil;
 import com.revature.project.Car;
-import com.revature.project.Customer;
 import com.revature.util.ConnectionFactory;
 
 public class CarDaoImpl implements CarDao {
 
 	private static Connection conn = ConnectionFactory.getConnection();
-	public static ArrayList<Car> carList = new ArrayList<Car>();
+	//public static ArrayList<Car> carList = new ArrayList<Car>();
 	
 	@Override
 	public void createCar(Car c) {
@@ -118,10 +116,12 @@ public class CarDaoImpl implements CarDao {
 
 	@Override
 	public ArrayList<Car> getAllCars() {
-		
-		String sql = "select carid,vin,make,model,car_year,mileage,price from car_dealership where available = 'true'";
+		ArrayList<Car> carList = new ArrayList<Car>();
+		String sql = "select carid,vin,make,model,car_year,mileage,price "
+				+ "from car_dealership where available = 'true'";
         Statement stmt;
         try {
+        	conn.setAutoCommit(false);
             stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
@@ -144,4 +144,36 @@ public class CarDaoImpl implements CarDao {
 
 	}
 
+	@Override
+	public ArrayList<Car> getAllOffers() {
+		ArrayList<Car> carOffer = new ArrayList<>();
+
+		String sql = "select carid,vin,make,model,car_year,mileage,price"
+				+ " from car_dealership where car_offer = 'true'";
+		Statement stmt;
+
+		try {
+			conn.setAutoCommit(false);
+			stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+			//while (rs.next()) {
+				while (rs.next()) {
+					carOffer.add(new Car(rs.getInt(1),rs.getString(2), rs.getString(3), 
+	            			rs.getString(4), rs.getInt(5), rs.getInt(6), rs.getDouble(7)));
+	            }
+//				carList.add(new Car(rs.getInt(1), rs.getInt("customerid"), rs.getString("car_name"), 
+//						rs.getDouble("car_price"), rs.getBoolean("for_sale"), rs.getBoolean("offer_flag")));
+			//}
+			conn.commit();
+			conn.setAutoCommit(true);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return carOffer;
+	}
 }
+
+

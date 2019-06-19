@@ -746,3 +746,636 @@
 2019-06-18 16:46:11 INFO  root:18 - Connection to DB Successful.
 2019-06-18 16:46:12 INFO  root:18 - Connection to DB Successful.
 2019-06-18 16:46:12 INFO  root:18 - Connection to DB Successful.
+2019-06-18 16:47:00 TRACE root:10 - Program started successfully.
+2019-06-18 16:47:02 INFO  root:18 - Connection to DB Successful.
+2019-06-18 16:47:03 INFO  root:18 - Connection to DB Successful.
+2019-06-18 16:47:03 INFO  root:18 - Connection to DB Successful.
+2019-06-18 16:47:04 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:39:43 TRACE root:10 - Program started successfully.
+2019-06-18 21:39:44 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:39:45 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:39:46 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:39:46 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:41:14 TRACE root:10 - Program started successfully.
+2019-06-18 21:41:15 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:41:16 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:41:16 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:41:17 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:43:46 TRACE root:10 - Program started successfully.
+2019-06-18 21:43:48 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:43:49 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:43:49 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:43:50 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:44:28 TRACE root:10 - Program started successfully.
+2019-06-18 21:44:29 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:44:30 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:44:30 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:44:31 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:48:20 TRACE root:10 - Program started successfully.
+2019-06-18 21:48:22 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:48:23 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:48:23 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:48:24 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:50:54 TRACE root:10 - Program started successfully.
+2019-06-18 21:50:56 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:50:56 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:50:57 INFO  root:18 - Connection to DB Successful.
+2019-06-18 21:50:58 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:00:41 TRACE root:10 - Program started successfully.
+2019-06-18 22:00:42 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:00:43 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:00:44 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:00:44 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:02:07 TRACE root:10 - Program started successfully.
+2019-06-18 22:02:08 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:02:09 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:02:09 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:02:10 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:03:52 TRACE root:10 - Program started successfully.
+2019-06-18 22:03:54 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:03:54 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:03:55 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:03:56 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:07:12 TRACE root:10 - Program started successfully.
+2019-06-18 22:07:13 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:07:14 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:07:15 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:07:15 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:09:08 TRACE root:10 - Program started successfully.
+2019-06-18 22:09:09 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:09:10 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:09:10 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:09:11 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:23:25 TRACE root:10 - Program started successfully.
+2019-06-18 22:23:27 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:23:27 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:23:28 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:23:28 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:23:29 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:27:12 TRACE root:10 - Program started successfully.
+2019-06-18 22:27:13 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:27:14 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:27:15 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:27:15 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:27:16 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:30:04 TRACE root:10 - Program started successfully.
+2019-06-18 22:30:05 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:30:06 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:30:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:30:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:30:08 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:32:34 TRACE root:10 - Program started successfully.
+2019-06-18 22:32:35 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:32:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:32:37 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:32:37 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:32:38 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:36:05 TRACE root:10 - Program started successfully.
+2019-06-18 22:36:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:36:08 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:36:09 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:36:10 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:36:11 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:37:28 TRACE root:10 - Program started successfully.
+2019-06-18 22:37:29 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:37:30 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:37:31 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:37:31 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:37:32 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:38:47 TRACE root:10 - Program started successfully.
+2019-06-18 22:38:49 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:38:50 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:38:50 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:38:51 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:38:51 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:05 TRACE root:10 - Program started successfully.
+2019-06-18 22:42:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:08 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:09 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:09 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:40 TRACE root:10 - Program started successfully.
+2019-06-18 22:42:42 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:42 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:43 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:43 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:42:44 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:43:10 TRACE root:10 - Program started successfully.
+2019-06-18 22:43:12 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:43:13 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:43:13 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:43:14 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:43:15 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:43:24 ERROR root:26 - Failed to connect....or something
+2019-06-18 22:44:22 TRACE root:10 - Program started successfully.
+2019-06-18 22:44:23 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:44:24 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:44:24 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:44:25 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:44:26 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:44:32 ERROR root:26 - Failed to connect....or something
+2019-06-18 22:48:33 TRACE root:10 - Program started successfully.
+2019-06-18 22:48:34 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:48:35 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:48:35 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:48:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:48:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:49:29 TRACE root:10 - Program started successfully.
+2019-06-18 22:49:30 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:49:31 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:49:31 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:49:32 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:49:33 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:51:04 TRACE root:10 - Program started successfully.
+2019-06-18 22:51:06 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:51:06 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:51:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:51:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:51:08 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:53:30 TRACE root:10 - Program started successfully.
+2019-06-18 22:53:31 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:53:32 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:53:32 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:53:33 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:53:34 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:05 TRACE root:10 - Program started successfully.
+2019-06-18 22:54:06 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:08 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:09 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:34 TRACE root:10 - Program started successfully.
+2019-06-18 22:54:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:37 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:38 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:38 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:54:46 ERROR root:26 - Failed to connect....or something
+2019-06-18 22:56:04 TRACE root:10 - Program started successfully.
+2019-06-18 22:56:05 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:56:06 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:56:06 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:56:07 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:56:08 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:56:16 ERROR root:26 - Failed to connect....or something
+2019-06-18 22:57:35 TRACE root:10 - Program started successfully.
+2019-06-18 22:57:37 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:57:37 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:57:38 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:57:38 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:57:39 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:58:34 TRACE root:10 - Program started successfully.
+2019-06-18 22:58:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:58:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:58:37 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:58:38 INFO  root:18 - Connection to DB Successful.
+2019-06-18 22:58:38 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:02:37 TRACE root:10 - Program started successfully.
+2019-06-18 23:02:38 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:02:39 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:02:40 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:02:40 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:02:41 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:03:46 TRACE root:10 - Program started successfully.
+2019-06-18 23:03:47 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:03:48 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:03:49 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:03:49 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:03:50 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:05:08 TRACE root:10 - Program started successfully.
+2019-06-18 23:05:10 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:05:11 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:05:11 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:05:12 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:05:13 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:07:33 TRACE root:10 - Program started successfully.
+2019-06-18 23:07:35 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:07:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:07:36 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:07:37 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:07:37 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:09:37 TRACE root:10 - Program started successfully.
+2019-06-18 23:09:45 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:09:46 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:09:46 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:09:47 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:09:48 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:13:20 TRACE root:10 - Program started successfully.
+2019-06-18 23:13:21 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:13:22 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:13:23 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:13:23 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:13:24 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:19:17 TRACE root:10 - Program started successfully.
+2019-06-18 23:19:20 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:19:20 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:19:21 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:19:21 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:19:22 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:21:22 TRACE root:10 - Program started successfully.
+2019-06-18 23:21:24 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:21:24 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:21:25 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:21:26 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:21:26 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:22:48 TRACE root:10 - Program started successfully.
+2019-06-18 23:22:50 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:22:51 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:22:51 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:22:52 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:22:52 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:23:22 TRACE root:10 - Program started successfully.
+2019-06-18 23:23:24 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:23:24 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:23:25 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:23:26 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:23:26 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:26:12 TRACE root:10 - Program started successfully.
+2019-06-18 23:26:15 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:26:16 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:26:16 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:26:17 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:26:17 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:45:49 TRACE root:10 - Program started successfully.
+2019-06-18 23:45:51 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:45:52 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:45:53 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:45:53 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:45:54 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:46:57 TRACE root:10 - Program started successfully.
+2019-06-18 23:46:58 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:46:59 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:47:00 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:47:00 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:47:01 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:47:50 TRACE root:10 - Program started successfully.
+2019-06-18 23:47:53 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:47:53 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:47:54 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:47:55 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:47:55 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:50:36 TRACE root:10 - Program started successfully.
+2019-06-18 23:50:39 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:50:39 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:50:40 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:50:41 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:50:42 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:53:55 TRACE root:10 - Program started successfully.
+2019-06-18 23:53:57 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:53:58 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:53:59 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:53:59 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:54:00 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:55:15 TRACE root:10 - Program started successfully.
+2019-06-18 23:55:17 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:55:18 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:55:19 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:55:19 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:55:20 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:56:55 TRACE root:10 - Program started successfully.
+2019-06-18 23:56:57 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:56:58 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:56:59 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:56:59 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:57:00 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:59:42 TRACE root:10 - Program started successfully.
+2019-06-18 23:59:44 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:59:45 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:59:45 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:59:46 INFO  root:18 - Connection to DB Successful.
+2019-06-18 23:59:47 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:26 TRACE root:10 - Program started successfully.
+2019-06-19 00:01:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:30 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:31 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:31 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:48 TRACE root:10 - Program started successfully.
+2019-06-19 00:01:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:01:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:03:21 TRACE root:10 - Program started successfully.
+2019-06-19 00:03:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:03:24 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:03:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:03:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:03:26 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:06:26 TRACE root:10 - Program started successfully.
+2019-06-19 00:06:28 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:06:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:06:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:06:30 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:06:31 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:07:06 TRACE root:10 - Program started successfully.
+2019-06-19 00:07:09 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:07:10 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:07:10 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:07:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:07:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:12 TRACE root:10 - Program started successfully.
+2019-06-19 00:09:15 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:15 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:16 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:17 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:17 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:46 TRACE root:10 - Program started successfully.
+2019-06-19 00:09:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:49 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:09:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:11 TRACE root:10 - Program started successfully.
+2019-06-19 00:11:13 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:13 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:14 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:15 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:15 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:49 TRACE root:10 - Program started successfully.
+2019-06-19 00:11:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:53 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:11:53 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:13:57 TRACE root:10 - Program started successfully.
+2019-06-19 00:14:00 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:14:01 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:14:03 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:14:03 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:14:04 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:07 TRACE root:10 - Program started successfully.
+2019-06-19 00:16:08 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:09 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:10 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:12 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:45 TRACE root:10 - Program started successfully.
+2019-06-19 00:16:47 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:16:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:21:43 TRACE root:10 - Program started successfully.
+2019-06-19 00:21:45 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:21:46 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:21:46 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:21:47 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:21:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:24:16 TRACE root:10 - Program started successfully.
+2019-06-19 00:24:18 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:24:18 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:24:19 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:24:20 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:24:20 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:25:45 TRACE root:10 - Program started successfully.
+2019-06-19 00:25:47 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:25:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:25:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:25:49 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:25:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:26:30 TRACE root:10 - Program started successfully.
+2019-06-19 00:26:32 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:26:32 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:26:33 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:26:34 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:26:34 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:28:45 TRACE root:10 - Program started successfully.
+2019-06-19 00:28:47 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:28:47 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:28:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:28:49 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:28:49 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:31:47 TRACE root:10 - Program started successfully.
+2019-06-19 00:31:49 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:31:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:31:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:31:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:31:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:34:32 TRACE root:10 - Program started successfully.
+2019-06-19 00:34:34 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:34:34 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:34:35 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:34:35 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:34:36 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:35:16 TRACE root:10 - Program started successfully.
+2019-06-19 00:35:18 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:35:19 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:35:19 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:35:20 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:35:21 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:11 TRACE root:10 - Program started successfully.
+2019-06-19 00:39:13 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:13 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:14 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:15 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:15 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:38 TRACE root:10 - Program started successfully.
+2019-06-19 00:39:40 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:41 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:42 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:42 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:39:43 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:40:50 TRACE root:10 - Program started successfully.
+2019-06-19 00:40:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:40:53 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:40:53 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:40:54 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:40:55 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:41:21 TRACE root:10 - Program started successfully.
+2019-06-19 00:41:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:41:24 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:41:24 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:41:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:41:26 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:43:27 TRACE root:10 - Program started successfully.
+2019-06-19 00:43:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:43:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:43:30 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:43:30 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:43:31 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:45:43 TRACE root:10 - Program started successfully.
+2019-06-19 00:45:45 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:45:46 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:45:46 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:45:47 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:45:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:49:49 TRACE root:10 - Program started successfully.
+2019-06-19 00:49:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:49:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:49:53 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:49:54 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:49:54 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:53:20 TRACE root:10 - Program started successfully.
+2019-06-19 00:53:22 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:53:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:53:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:53:24 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:53:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:03 TRACE root:10 - Program started successfully.
+2019-06-19 00:56:05 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:06 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:07 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:07 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:08 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:23 TRACE root:10 - Program started successfully.
+2019-06-19 00:56:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:26 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:27 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:56:27 INFO  root:18 - Connection to DB Successful.
+2019-06-19 00:59:03 TRACE root:10 - Program started successfully.
+2019-06-19 00:59:05 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:06 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:06 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:07 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:07 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:40 TRACE root:10 - Program started successfully.
+2019-06-19 00:59:42 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:43 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:43 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:44 ERROR root:26 - Failed to make DB Connection
+2019-06-19 00:59:44 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:00:37 TRACE root:10 - Program started successfully.
+2019-06-19 01:00:38 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:00:39 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:00:39 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:00:40 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:00:40 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:01:18 TRACE root:10 - Program started successfully.
+2019-06-19 01:01:20 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:01:21 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:01:21 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:01:22 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:01:22 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:03:52 TRACE root:10 - Program started successfully.
+2019-06-19 01:03:54 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:03:54 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:03:55 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:03:55 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:03:56 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:04:58 TRACE root:10 - Program started successfully.
+2019-06-19 01:05:01 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:01 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:02 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:02 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:03 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:21 TRACE root:10 - Program started successfully.
+2019-06-19 01:05:23 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:24 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:25 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:25 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:05:26 ERROR root:26 - Failed to make DB Connection
+2019-06-19 01:06:06 TRACE root:10 - Program started successfully.
+2019-06-19 01:06:09 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:09 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:10 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:46 TRACE root:10 - Program started successfully.
+2019-06-19 01:06:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:49 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:06:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:07:21 TRACE root:10 - Program started successfully.
+2019-06-19 01:07:22 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:07:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:07:24 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:07:24 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:07:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:08:20 INFO  root:18 - Adding a car
+2019-06-19 01:14:25 TRACE root:10 - Program started successfully.
+2019-06-19 01:14:27 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:14:28 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:14:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:14:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:14:30 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:15:21 TRACE root:10 - Program started successfully.
+2019-06-19 01:15:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:15:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:15:24 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:15:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:15:25 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:17:14 TRACE root:10 - Program started successfully.
+2019-06-19 01:17:17 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:17:17 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:17:18 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:17:18 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:17:19 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:20:19 TRACE root:10 - Program started successfully.
+2019-06-19 01:20:21 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:20:21 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:20:22 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:20:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:20:23 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:22:47 TRACE root:10 - Program started successfully.
+2019-06-19 01:22:49 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:22:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:22:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:22:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:22:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:26:47 TRACE root:10 - Program started successfully.
+2019-06-19 01:26:48 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:26:49 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:26:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:26:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:26:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:28:48 TRACE root:10 - Program started successfully.
+2019-06-19 01:28:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:28:50 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:28:51 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:28:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:28:52 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:04 TRACE root:10 - Program started successfully.
+2019-06-19 01:30:06 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:06 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:07 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:08 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:08 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:40 TRACE root:10 - Program started successfully.
+2019-06-19 01:30:42 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:43 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:43 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:44 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:30:45 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:31:38 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:31:38 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:31:39 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:31:40 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:31:40 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:32:47 TRACE root:10 - Program started successfully.
+2019-06-19 01:33:27 TRACE root:10 - Program started successfully.
+2019-06-19 01:33:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:33:30 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:33:30 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:33:31 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:33:32 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:33:55 TRACE root:10 - Program started successfully.
+2019-06-19 01:34:02 TRACE root:10 - Program started successfully.
+2019-06-19 01:34:08 TRACE root:10 - Program started successfully.
+2019-06-19 01:34:10 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:12 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:13 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:29 TRACE root:10 - Program started successfully.
+2019-06-19 01:34:32 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:32 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:33 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:34 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:34:34 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:35:27 TRACE root:10 - Program started successfully.
+2019-06-19 01:35:29 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:35:30 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:35:31 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:35:31 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:38:07 TRACE root:10 - Program started successfully.
+2019-06-19 01:38:09 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:38:10 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:38:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:38:11 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:39:06 TRACE root:10 - Program started successfully.
+2019-06-19 01:39:08 INFO  root:18 - Connection to DB Successful.
+2019-06-19 01:39:12 TRACE root:10 - Program started successfully.
+2019-06-19 01:39:14 INFO  root:18 - Connection to DB Successful.

@@ -9,9 +9,9 @@ import com.revature.dao.CarDaoImpl;
 import com.revature.dao.CustomerDao;
 import com.revature.dao.CustomerDaoImpl;
 import com.revature.dao.OfferDao;
-import com.revature.dao.OfferDao1;
+import com.revature.dao.OfferDao;
 import com.revature.dao.OfferDaoImpl;
-import com.revature.dao.OfferDaoImpl1;
+import com.revature.dao.OfferDaoImpl;
 import com.revature.driver.CarDriver;
 import com.revature.driver.Dealership;
 import com.revature.logging.LoggingUtil;
@@ -34,8 +34,8 @@ public class Customer implements Serializable{//User,
 	public static Scanner sc = new Scanner(System.in);
 	public String get,get2;
 	private static Dealership d;
-	private static OfferDao newOffer = new OfferDaoImpl();
-	private static OfferDao1 newOffer1 = new OfferDaoImpl1();
+	//private static OfferDao newOffer = new OfferDaoImpl();
+	private static OfferDao newOffer1 = new OfferDaoImpl();
 	private static CarDaoImpl newCar = new CarDaoImpl();
 	private static CustomerDaoImpl newCust = new CustomerDaoImpl();
 	
@@ -83,10 +83,10 @@ public class Customer implements Serializable{//User,
 
 	public static void makeOffer(ArrayList<Car> cars) {
 		int carNumber;
-		//ArrayList<Car> carList = newCar.getAllCars();
+		ArrayList<Car> carList = newCar.getAllCars();
 		//System.out.println(newCar.carList);
+		if (carList.size()>0) {
 		System.out.println("Please select # of the car you like");
-
 		do {
 			System.out.print("Select car #: ");
 			while(!sc.hasNextInt()) {
@@ -94,7 +94,7 @@ public class Customer implements Serializable{//User,
 				sc.next();
 			}
 			carNumber = sc.nextInt();
-		} while (carNumber < 1 || carNumber > newCar.carList.size());
+		} while (carNumber < 1 || carNumber > carList.size());
 		
 		//if (CarLot.offersMade.contains(cars.get(carNumber-1))) {
 		//	System.out.println("\nOffer for this car has already been made");			
@@ -116,13 +116,14 @@ public class Customer implements Serializable{//User,
 			Integer pending = 1;
 			//newOffer.createOffer(new Car(newCust.custList.get(2).getId(),newCar.carList.get(carNumber-1).getId(),c.offeringPrice));
 			//Offer o = new Offer(newCust.custList.get(2).getId(), newCar.carList.get(carNumber-1).getId(), c.offeringPrice, pending );
-			newOffer1.insertOffer(new Offer(newCust.custList.get(2).getId(), newCar.carList.get(carNumber-1).getId(), c.offeringPrice, pending ));
-			//Car offerCar = newCar.getCarById(newCar.carList.get(carNumber-1).getId());
-			//offerCar.setOfferFlag(true);
+			newOffer1.insertOffer(new Offer(newCust.custList.get(2).getId(), carList.get(carNumber-1).getId(), c.offeringPrice, pending ));
+			//System.out.println(carList.get(carNumber-1).getId());
+			//System.out.println(carList.get(index));
 			
-			
+		} else {
+			System.out.println("No cars in lot");
 		}
-	//}
+	}
 
 	public static void viewCars2(ArrayList<Car> cars) {
 		int i = 1;
@@ -142,26 +143,30 @@ public class Customer implements Serializable{//User,
 
 	public static void viewOffersMade() {
 		int i = 1;
-		for (Car car : CarLot.offersMade) {
-			System.out.println("# " + "| " + "VIN  " + "| " + "Make  " + "| " + "Model " + "| " + "Color " + "| " + "Year " + "| " + "Mileage " + "| " + "Price " + "| " + "Offer ");
-			System.out.println(i++ + "  " + car.getVIN() + "  " +  car.getMake() + "    " + car.getModel() + "   " + car.getColor()
-			+ "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice() + "   " + offeringPrice);//offeringPrice );//+ cd.customers2.get(car));
+		for (Car car : newCar.getAllOffers()) {
+			System.out.println("# " + "| " + "VIN  " + "| " + "Make  " + "| " + "Model " + "| " + "Year " + "| " + "Mileage " + "| " + "Price " + "| " + "Offer ");
+			System.out.println(i++ + "  " + car.getVIN() + "  " +  car.getMake() + "    " + car.getModel() + "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice() + "   " + offeringPrice);//offeringPrice );//+ cd.customers2.get(car));
 			System.out.println();
 		}
-		OfferDaoImpl om = new OfferDaoImpl();
-        for (Car ca: om.getAllOffers()) {
-        	System.out.println(ca);
-        }
+//		CarDaoImpl cdi = new CarDaoImpl();
+//        for (Car ca: cdi.getAllOffers()) {
+//        	System.out.println(ca);
+//        }
 	}
 
 	public static void viewCarsOwned2() {
 		int i = 1;
-		for (Car car : CarLot.carsOwned2) {
-			System.out.println("# " + "| " + "VIN  " + "| " + "Make  " + "| " + "Model " + "| " + "Color " + "| " + "Year " + "| " + "Mileage " + "| " + "Price ");
-			System.out.println(i++ + "  " + car.getVIN() + "  " +  car.getMake() + "    " + car.getModel() + "   " + car.getColor()
-			+ "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice());
+		for (Car car : newCust.viewCars(newCust.getAllCustomer().get(2).getName())) {
+			System.out.println("# " + "| " + "VIN  " + "| " + "Make  " + "| " + "Model " + "| " + "Year " + "| " + "Mileage " + "| " + "Price ");
+			System.out.println(i++ + "  " + car.getVIN() + "  " +  car.getMake() + "    " + car.getModel() + "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice());
 			System.out.println();
 		}
+//		ArrayList<Customer> custList = newCust.getAllCustomer();
+//		//System.out.println(custList);
+//		//System.out.println(custList.get(2).getName());
+//		for (Car ca: newCust.viewCars(custList.get(2).getName())) {
+//        	System.out.println(ca);
+//        }
 	}
 
 	public static boolean welcomeDisplay() {
@@ -210,11 +215,7 @@ public class Customer implements Serializable{//User,
 		c.get = sc.next();
 		CustomerDao newCust = new CustomerDaoImpl();
 		ArrayList<Customer> custList = newCust.getAllCustomer();
-		System.out.println(custList);
-		if (custList.contains(c.get)) {
-			System.out.println("forever youg");
-		}
-		//System.out.println(custList.get(0).getName());
+		//System.out.println(custList);
 		for (int i = 0; i < custList.size(); i++) {
 			if (custList.get(i).name.equals(c.get) ) {
 				System.out.println("Account Found");
@@ -360,7 +361,7 @@ public class Customer implements Serializable{//User,
 			break;
 		case 3:
 			System.out.println("Show cars owned.");
-			cd.getCarsOwned();
+			//cd.getCarsOwned();
 			viewCarsOwned2();
 			break;
 		case 4:

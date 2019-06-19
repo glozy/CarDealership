@@ -1,27 +1,34 @@
 package com.revature.dao;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import com.revature.project.Car;
+
+import com.revature.project.Offer;
 
 public interface OfferDao {
+
+	
+//public void createCar(Car c);
+	
+	//public void updateCustomer(Customer c);
+	
+	//public void deleteOfferbyCarID(Integer id);
+	
+//	public Offer getOfferByCustomerId(Integer id);
+	
+	//public Offer getOfferByCarId(Integer id);
+	
+	//public Offer getOfferByOfferId(Integer id);
+	
+//	public Car getUserByUsername(String name);
+	
+	public ArrayList<Offer> getOffersbyCarID(Integer id);
+	
+	public void insertOffer(Offer o);
 	
 	
-	public ArrayList<Car> getAllOffers();
+	public int getCustomerIDbyofferID(Integer offerChosen);
 	
-	public void createOffer(Car c);
 	
-//	public void updateCar(Car c);
-//	
-//	public void deleteCar(Car c);
-//	
-//	public Car getCarById(Integer id);
-//	
-//	public Car getCarByUsername(String username);
-//	
-//	public ArrayList<Car> getAllCars();
-//
-//	void preparedUpdateCar(Car c);
-	
+
 }

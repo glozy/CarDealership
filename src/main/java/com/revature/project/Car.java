@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Car implements Serializable{
 	
 	private String VIN, make, model, color;
-	private int year, mileage, id;
+	private int year, mileage, id, customerId;;
 	private boolean offerFlag = false;
 	
 
@@ -33,6 +33,17 @@ public class Car implements Serializable{
 		this.id = id;
 		this.offerPrice = offerPrice;
 		this.offerFlag = false;
+	}
+	
+	public Car(int id, int customerId, String VIN, String make, String model, int year, int mileage, double price ) {
+		this.id = id;
+		this.customerId = customerId;
+		this.VIN = VIN;
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		this.mileage = mileage;
+		this.price = price;
 	}
 
 	public void setOfferFlag(boolean offerFlag) {

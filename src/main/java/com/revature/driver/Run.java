@@ -14,7 +14,7 @@ public class Run {
 		LoggingUtil.trace("Program started successfully.");
 		
 		Dealership d = new Dealership();
-		d = fdao.loadDealership();
+		//d = fdao.loadDealership();
 		d.startHere();
 		
 		

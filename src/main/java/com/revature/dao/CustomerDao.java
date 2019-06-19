@@ -1,8 +1,8 @@
 package com.revature.dao;
 
 import java.util.ArrayList;
-import java.util.List;
 
+import com.revature.project.Car;
 import com.revature.project.Customer;
 
 public interface CustomerDao {
@@ -18,6 +18,8 @@ public interface CustomerDao {
 	public Customer getCustomerByUsername(String username);
 	
 	public ArrayList<Customer> getAllCustomer();
+	
+	public ArrayList<Car> viewCars(String userName);
 
 	void preparedUpdateCustomer(Customer c);
 }

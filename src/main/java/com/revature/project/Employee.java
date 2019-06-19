@@ -1,18 +1,22 @@
 package com.revature.project;
 
 import java.io.Serializable;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import com.revature.dao.CarDao;
 import com.revature.dao.CarDaoImpl;
 import com.revature.dao.CustomerDaoImpl;
+import com.revature.dao.OfferDaoImpl;
 import com.revature.driver.CarDriver;
 import com.revature.driver.Dealership;
 import com.revature.logging.LoggingUtil;
 import com.revature.project.serialize.FileSerializeDAO;
+import com.revature.util.ConnectionFactory;
 
 
 public class Employee implements Serializable{//implements User{
@@ -27,6 +31,9 @@ public class Employee implements Serializable{//implements User{
 	private static Dealership d;
 	private static Employee e;
 	private static CarDaoImpl newCar = new CarDaoImpl();
+	private static OfferDaoImpl od = new OfferDaoImpl();
+	private static CustomerDaoImpl cdi = new CustomerDaoImpl();
+	private static Connection conn = ConnectionFactory.getConnection();
 	
 	public ArrayList<Car> cars2 = new ArrayList<Car>(cl.cars);
 	public ArrayList<Car> offersMade2 = new ArrayList<Car>(cl.offersMade);
@@ -38,6 +45,7 @@ public class Employee implements Serializable{//implements User{
 		
 	
 	public static void addCar(ArrayList<Car> cars) {
+		ArrayList<Car> carList = newCar.getAllCars();
 		 	boolean validInput;
 	        String VIN, make, model, color;
 	        int mileage = 0, year = 0;
@@ -51,8 +59,6 @@ public class Employee implements Serializable{//implements User{
 	            make = sc.next();
 	            System.out.println("Enter model");
 	            model = sc.next();
-	            System.out.println("Enter color");
-	            color = sc.next();
 	            System.out.println("Enter year");
 	            if(sc.hasNextInt()) { 
 	                year = sc.nextInt();}
@@ -75,7 +81,7 @@ public class Employee implements Serializable{//implements User{
 	        } while(validInput == false);
 	       // cl.cars.add(new Car(VIN,make,model,color,year,mileage,price));
 	        
-	        newCar.createCar(new Car(newCar.carList.get(0).getId()+1,VIN,make,model,year,mileage,price));
+	        newCar.createCar(new Car(carList.get(0).getId()+1,VIN,make,model,year,mileage,price));
 	       // cl.cars.add(new Car("AT210", "Ford", "Focus", "Silver", 2018, 21000, 7500.00));
 	   
 	        System.out.println("-------------------------");
@@ -86,8 +92,8 @@ public class Employee implements Serializable{//implements User{
 	
 	public static void removeCar(ArrayList<Car> cars) {
 		int carNumber;
-		
-		if(newCar.carList.size()>0) {
+		ArrayList<Car> carList = newCar.getAllCars();
+		if(carList.size()>0) {
 			System.out.println("Please select # of the car you want to delete");
 			//CarLot.viewCars(cars);
 			do {
@@ -99,8 +105,8 @@ public class Employee implements Serializable{//implements User{
 				}
 				carNumber = sc.nextInt();
 
-			} while (carNumber < 1 || carNumber > newCar.carList.size());
-			newCar.carList.remove(carNumber-1);
+			} while (carNumber < 1 || carNumber > carList.size());
+			carList.remove(carNumber-1);
 			newCar.deleteCar(newCar.getCarById(carNumber));
 			System.out.println("-----------------------");
 	        System.out.println("Car removed succesfully");
@@ -110,10 +116,9 @@ public class Employee implements Serializable{//implements User{
 	
 	public static void viewOffersMade() {
 		int i = 1;
-		for (Car car : cl.offersMade) {
-			System.out.println("# " + "| " + "VIN  " + "| " + "Make  " + "| " + "Model " + "| " + "Color " + "| " + "Year " + "| " + "Mileage " + "| " + "Price " + "| " + "Offer ");
-            System.out.println(i++ + "  " + car.getVIN() + "  " +  car.getMake() + "    " + car.getModel() + "   " + car.getColor()
-            			+ "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice() + "   " + c.offeringPrice );//+ cd.customers2.get(car));
+		for (Car car : newCar.getAllOffers()) {
+			System.out.println("# " + "| " + "VIN  " + "| " + "Make  " + "| " + "Model " + "| " + "Year " + "| " + "Mileage " + "| " + "Price " + "| " + "Offer ");
+            System.out.println(i++ + "  " + car.getVIN() + "  " +  car.getMake() + "    " + car.getModel() + "   " + car.getYear() + "   " + car.getMileage() + "     " + car.getPrice() + "   " + c.offeringPrice );//+ cd.customers2.get(car));
 			System.out.println();
 		}
 	}
@@ -129,8 +134,10 @@ public class Employee implements Serializable{//implements User{
 //	}
 	
 	public static void acceptOffer(ArrayList<Car> cars) {
+	ArrayList<Car> offerCars = 	newCar.getAllOffers();
+	ArrayList<Customer> cust = 	cdi.getAllCustomer();
 		int carNumber, offer;
-		if(cl.offersMade.size()>0) {
+		if(offerCars.size()>0) {
 			System.out.println("Please select # of the car");
 			do {
 				System.out.print("Select car #: ");
@@ -139,17 +146,38 @@ public class Employee implements Serializable{//implements User{
 					sc.next();
 				}
 				carNumber = sc.nextInt();
-			} while (carNumber < 1 || carNumber > cl.cars.size());				
+			} while (carNumber < 1 || carNumber > offerCars.size());				
 			System.out.println("What would you like to do? (1) to accept offer, (2) to reject offer");
 			offer = sc.nextInt();
 			if (offer == 1) {
-				cl.carsOwned2.add(cl.offersMade.get(carNumber-1));
+				for(Offer li: od.getOffersbyCarID(carNumber-1)) {
+					System.out.println(li);
+				}
+				
+				String sql = "{call accept_offer_proc(?,?)}";
+				try {
+					//conn.setAutoCommit(false);
+					CallableStatement call = conn.prepareCall(sql);
+					call.setInt(1, cust.get(2).getId());
+					call.setInt(2, offerCars.get(0).getId());
+					call.executeQuery();
+					//System.out.println(cust.get(2).getId());
+					//System.out.println(offerCars.get(0).getId());
+					
+					
+				} catch (SQLException e) {
+					LoggingUtil.error("Failed to connect....or something");
+					e.printStackTrace();
+				}
+				//cl.carsOwned2.add(cl.offersMade.get(carNumber-1));
 				System.out.println("--------------");
 		        System.out.println("Offer accepted");
 		        System.out.println("--------------");
-		        cl.offersMade.remove(cl.offersMade.get(carNumber-1));
+		        //cl.offersMade.remove(cl.offersMade.get(carNumber-1));
 			} else if (offer == 2) {
-				cl.offersMade.remove(cl.offersMade.get(carNumber-1));
+				
+				
+				//cl.offersMade.remove(cl.offersMade.get(carNumber-1));
 				System.out.println("--------------");
 		        System.out.println("Offer rejected");
 		        System.out.println("--------------");
